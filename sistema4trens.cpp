@@ -2,12 +2,14 @@
 #include "ui_sistema4trens.h"
 
 void *thread_functionTrem1(void *arg);
-
 void *thread_functionTrem2(void *arg);
-
 void *thread_functionTrem3(void *arg);
-
 void *thread_functionTrem4(void *arg);
+
+pthread_mutex_t mutexL3, mutexL4, mutexL5, mutexL6, mutexL10;
+
+int velocidade_trem1, velocidade_trem2, velocidade_trem3, velocidade_trem4;
+
 
 sistema4trens::sistema4trens(QWidget *parent)
     : QMainWindow(parent)
@@ -23,7 +25,7 @@ sistema4trens::~sistema4trens()
 
 void *thread_functionTrem1(void *arg)
 {
-    /*sleep(1);
+    sleep(1);
     while(1)
     {
         // Sai de L1 vai para L2
@@ -42,12 +44,12 @@ void *thread_functionTrem1(void *arg)
         pthread_mutex_unlock(&mutexL4);
         sleep(velocidade_trem1);
     }
-    pthread_exit(0);*/
+    pthread_exit(0);
 }
 
 void *thread_functionTrem2(void *arg)
 {
-    /*sleep(1);
+    sleep(1);
     while(1)
     {
         // Sai de L3 vai para L7
@@ -66,17 +68,63 @@ void *thread_functionTrem2(void *arg)
         pthread_mutex_unlock(&mutexL6);
         sleep(velocidade_trem2);
     }
-    pthread_exit(0);*/
+    pthread_exit(0);
 }
 
 void *thread_functionTrem3(void *arg)
 {
+    sleep(1);
+    while(1)
+    {
+        // Sai de L5 vai para L8
+        pthread_mutex_unlock(&mutexL5);
+        sleep(velocidade_trem2);
 
+        //Sai de L8 vai para L9
+        sleep(velocidade_trem2);
+
+        //Sai de L9 vai para L10
+        pthread_mutex_lock(&mutexL10);
+        sleep(velocidade_trem2);
+
+        //Sai de L10 vai para L5
+        pthread_mutex_unlock(&mutexL10);
+        pthread_mutex_lock(&mutexL5);
+        sleep(velocidade_trem2);
+    }
+    pthread_exit(0);
 }
 
 void *thread_functionTrem4(void *arg)
 {
+    sleep(1);
+    while(1)
+    {
+        // Sai de L12 vai para L13
+        sleep(velocidade_trem2);
 
+        //Sai de L13 vai para L11
+        sleep(velocidade_trem2);
+
+        //Sai de L11 vai para L4
+        pthread_mutex_lock(&mutexL4);
+        sleep(velocidade_trem2);
+
+        //Sai de L4 vai para L6
+        pthread_mutex_unlock(&mutexL4);
+        pthread_mutex_lock(&mutexL6);
+        sleep(velocidade_trem2);
+
+        //Sai de L6 vai para L10
+        pthread_mutex_unlock(&mutexL6);
+        pthread_mutex_lock(&mutexL10);
+        sleep(velocidade_trem2);
+
+        //Sai de L10 vai para L12
+        pthread_mutex_unlock(&mutexL10);
+        sleep(velocidade_trem2);
+    }
+    pthread_exit(0);
 }
 
 

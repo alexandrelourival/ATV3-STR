@@ -35,13 +35,9 @@ private:
 
     int res;
 
-    int velocidade_trem1, velocidade_trem2, velocidade_trem3, velocidade_trem4;
-
     pthread_t thread_trem1, thread_trem2, thread_trem3, thread_trem4;
 
     void *thread_result;
-
-    pthread_mutex_t mutexL3, mutexL4, mutexL5, mutexL6, mutexL10;
 
 
 };

@@ -16,6 +16,20 @@ sistema4trens::sistema4trens(QWidget *parent)
     , ui(new Ui::sistema4trens)
 {
     ui->setupUi(this);
+
+    ui->label_trem1->setVisible(true);
+    ui->label_trem1->setPixmap(QPixmap("/home/lourival/ATV3-STR/azul.png"));
+
+    ui->label_trem2->setVisible(true);
+    ui->label_trem2->setPixmap(QPixmap("/home/lourival/ATV3-STR/vermelho.png"));
+
+    ui->label_trem3->setVisible(true);
+    ui->label_trem3->setPixmap(QPixmap("/home/lourival/ATV3-STR/verde.png"));
+
+    ui->label_trem4->setVisible(true);
+    ui->label_trem4->setPixmap(QPixmap("/home/lourival/ATV3-STR/amarelo.png"));
+    //ui->label_trilho_trem1->setPixmap(QPixmap("/home/lourival/Área de Trabalho/UFRN/STR/ATV1-STR/right.png"));
+
 }
 
 sistema4trens::~sistema4trens()
@@ -29,8 +43,8 @@ void *thread_functionTrem1(void *arg)
     while(1)
     {
         // Sai de L1 vai para L2
-        sleep(velocidade_trem1);
 
+        sleep(velocidade_trem1);
         //Sai de L2 vai para L3
         pthread_mutex_lock(&mutexL3);
         sleep(velocidade_trem1);
@@ -223,4 +237,28 @@ void sistema4trens::on_actionQuit_triggered()
 {
     on_actionStop_triggered();
     QApplication::quit();
+}
+
+void sistema4trens::on_verticalSlider_trem1_valueChanged(int value)
+{
+    velocidade_trem1 = value;
+    ui->lcdNumber_trem1->display(value);
+}
+
+void sistema4trens::on_verticalSlider_trem2_valueChanged(int value)
+{
+    velocidade_trem2 = value;
+    ui->lcdNumber_trem2->display(value);
+}
+
+void sistema4trens::on_verticalSlider_trem3_valueChanged(int value)
+{
+    velocidade_trem3 = value;
+    ui->lcdNumber_trem3->display(value);
+}
+
+void sistema4trens::on_verticalSlider_trem4_valueChanged(int value)
+{
+    velocidade_trem4 = value;
+    ui->lcdNumber_trem4->display(value);
 }

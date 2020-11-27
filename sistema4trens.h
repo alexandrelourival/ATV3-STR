@@ -30,6 +30,14 @@ private slots:
 
     void on_actionQuit_triggered();
 
+    void on_verticalSlider_trem1_valueChanged(int value);
+
+    void on_verticalSlider_trem2_valueChanged(int value);
+
+    void on_verticalSlider_trem3_valueChanged(int value);
+
+    void on_verticalSlider_trem4_valueChanged(int value);
+
 private:
     Ui::sistema4trens *ui;
 

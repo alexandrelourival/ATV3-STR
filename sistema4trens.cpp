@@ -71,7 +71,7 @@ void sistema4trens::on_actionStart_triggered()
 
     res = sem_init(&bin_semL3, 0, 1); // criação do semaforo do trilho L3
     if (res != 0){
-        perror("Iniciação do semaforo do trilho L3 falhou");
+        QMessageBox::warning(this,"ERRO", "Iniciação do semaforo do trilho L3 falhou");
         exit(EXIT_FAILURE);
     }
 
@@ -179,7 +179,8 @@ void sistema4trens::on_actionStop_triggered()
     sem_destroy(&bin_semL4);  // destruição do semaforo L4
     sem_destroy(&bin_semL5);  // destruição do semaforo L5
     sem_destroy(&bin_semL6);  // destruição do semaforo L6
-    sem_destroy(&bin_semL10);  // destruição do semaforo L10
+    sem_destroy(&bin_semL10);  // destruição do semaforo L10*/
+
 
 }
 
@@ -218,7 +219,7 @@ void *thread_functionInterface(void *)
         ui_aux.label_trem2->setGeometry(x2,y2,30,30); // atualiza a posição do trem 2
         ui_aux.label_trem3->setGeometry(x3,y3,30,30); // atualiza a posição do trem 3
         ui_aux.label_trem4->setGeometry(x4,y4,30,30); // atualiza a posição do trem 4
-        usleep(1); // A thread_interface dorme por 0,1 segundo
+        usleep(100000); // A thread_interface dorme por 0,1 segundo
     }
 }
 

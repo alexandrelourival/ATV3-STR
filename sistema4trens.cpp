@@ -191,36 +191,34 @@ void sistema4trens::on_actionQuit_triggered()
 
 void* thread_functionPainel(void*)
 {
-    sleep(1);
     while(1)
     {
-        velocidade_trem1 = 6 - ui_aux.verticalSlider_trem1->value();
-        ui_aux.lcdNumber_trem1->display(ui_aux.verticalSlider_trem1->value());
+        velocidade_trem1 = 6 - ui_aux.verticalSlider_trem1->value(); // Pega a velocidade do trem 1 e transforma em segundos
+        ui_aux.lcdNumber_trem1->display(ui_aux.verticalSlider_trem1->value()); // Mostra a velocidade do trem 1 no lcd
 
-        velocidade_trem2 = 6 - ui_aux.verticalSlider_trem2->value();
-        ui_aux.lcdNumber_trem2->display(ui_aux.verticalSlider_trem2->value());
+        velocidade_trem2 = 6 - ui_aux.verticalSlider_trem2->value(); // Pega a velocidade do trem 2 e transforma em segundos
+        ui_aux.lcdNumber_trem2->display(ui_aux.verticalSlider_trem2->value()); // Mostra a velocidade do trem 2 no lcd
 
-        velocidade_trem3 = 6 - ui_aux.verticalSlider_trem3->value();
-        ui_aux.lcdNumber_trem3->display(ui_aux.verticalSlider_trem3->value());
+        velocidade_trem3 = 6 - ui_aux.verticalSlider_trem3->value(); // Pega a velocidade do trem 3 e transforma em segundos
+        ui_aux.lcdNumber_trem3->display(ui_aux.verticalSlider_trem3->value()); // Mostra a velocidade do trem 3 no lcd
 
-        velocidade_trem4 = 6 - ui_aux.verticalSlider_trem4->value();
-        ui_aux.lcdNumber_trem4->display(ui_aux.verticalSlider_trem4->value());
+        velocidade_trem4 = 6 - ui_aux.verticalSlider_trem4->value(); // Pega a velocidade do trem 4 e transforma em segundos
+        ui_aux.lcdNumber_trem4->display(ui_aux.verticalSlider_trem4->value()); // Mostra a velocidade do trem 4 no lcd
 
-        usleep(100000);
+        usleep(100000); // A thread_painel dorme por 0,1 segundo
 
     }
 }
 
 void *thread_functionInterface(void *)
 {
-    sleep(1);
     while(1)
     {
-        ui_aux.label_trem1->setGeometry(x1,y1,30,30);
-        ui_aux.label_trem2->setGeometry(x2,y2,30,30);
-        ui_aux.label_trem3->setGeometry(x3,y3,30,30);
-        ui_aux.label_trem4->setGeometry(x4,y4,30,30);
-        usleep(100000);
+        ui_aux.label_trem1->setGeometry(x1,y1,30,30); // atualiza a posição do trem 1
+        ui_aux.label_trem2->setGeometry(x2,y2,30,30); // atualiza a posição do trem 2
+        ui_aux.label_trem3->setGeometry(x3,y3,30,30); // atualiza a posição do trem 3
+        ui_aux.label_trem4->setGeometry(x4,y4,30,30); // atualiza a posição do trem 4
+        usleep(1); // A thread_interface dorme por 0,1 segundo
     }
 }
 
@@ -235,22 +233,22 @@ void *thread_functionTrem1(void *)
         sleep(velocidade_trem1);
 
         //Sai de L2 vai para L3
-        sem_wait(&bin_semL3);
+        sem_wait(&bin_semL3); // espera até o trilho L3 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x1 = 200;
         y1 = 90;
         sleep(velocidade_trem1);
 
         //Sai de L3 vai para L4
-        sem_wait(&bin_semL4);
+        sem_wait(&bin_semL4); // espera até o trilho L4 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x1 = 150;
         y1 = 150;
-        sem_post(&bin_semL3);
+        sem_post(&bin_semL3); // libera o trilho L3
         sleep(velocidade_trem1);
 
         //Sai de L4 vai para L1
         x1 = 90;
         y1 = 90;
-        sem_post(&bin_semL4);
+        sem_post(&bin_semL4); // libera o trilho L4
         sleep(velocidade_trem1);
     }
     pthread_exit(0);
@@ -264,27 +262,27 @@ void *thread_functionTrem2(void *)
         // Sai de L3 vai para L7
         x2 = 250;
         y2 = 40;
-        sem_post(&bin_semL3);
+        sem_post(&bin_semL3); // libera o trilho L3
         sleep(velocidade_trem2);
 
         //Sai de L7 vai para L5
-        sem_wait(&bin_semL5);
+        sem_wait(&bin_semL5); // espera até o trilho L5 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x2 = 310;
         y2 = 90;
         sleep(velocidade_trem2);
 
         //Sai de L5 vai para L6
-        sem_wait(&bin_semL6);
+        sem_wait(&bin_semL6); // espera até o trilho L6 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x2 = 250;
         y2 = 150;
-        sem_post(&bin_semL5);
+        sem_post(&bin_semL5); // libera o trilho L5
         sleep(velocidade_trem2);
 
         //Sai de L6 vai para L3
-        sem_wait(&bin_semL3);
+        sem_wait(&bin_semL3); // espera até o trilho L3 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x2 = 200;
         y2 = 90;
-        sem_post(&bin_semL6);
+        sem_post(&bin_semL6); // libera o trilho L6
         sleep(velocidade_trem2);
     }
     pthread_exit(0);
@@ -298,7 +296,7 @@ void *thread_functionTrem3(void *)
         // Sai de L5 vai para L8
         x3 = 370;
         y3 = 40;
-        sem_post(&bin_semL5);
+        sem_post(&bin_semL5); // libera o trilho L5
         sleep(velocidade_trem3);
 
         //Sai de L8 vai para L9
@@ -307,16 +305,16 @@ void *thread_functionTrem3(void *)
         sleep(velocidade_trem3);
 
         //Sai de L9 vai para L10
-        sem_wait(&bin_semL10);
+        sem_wait(&bin_semL10); // espera até o trilho L10 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x3 = 360;
         y3 = 150;
         sleep(velocidade_trem3);
 
         //Sai de L10 vai para L5
-        sem_wait(&bin_semL5);
+        sem_wait(&bin_semL5); // espera até o trilho L5 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x3 = 310;
         y3 = 90;
-        sem_post(&bin_semL10);
+        sem_post(&bin_semL10); // libera o trilho L10
         sleep(velocidade_trem3);
     }
     pthread_exit(0);
@@ -338,29 +336,29 @@ void *thread_functionTrem4(void *)
         sleep(velocidade_trem4);
 
         //Sai de L11 vai para L4
-        sem_wait(&bin_semL4);
+        sem_wait(&bin_semL4); // espera até o trilho L4 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x4 = 150;
         y4 = 150;
         sleep(velocidade_trem4);
 
         //Sai de L4 vai para L6
-        sem_wait(&bin_semL6);
+        sem_wait(&bin_semL6); // espera até o trilho L6 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x4 = 250;
         y4 = 150;
-        sem_post(&bin_semL4);
+        sem_post(&bin_semL4); // libera o trilho L4
         sleep(velocidade_trem4);
 
         //Sai de L6 vai para L10
-        sem_wait(&bin_semL10);
+        sem_wait(&bin_semL10); // espera até o trilho L10 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x4 = 360;
         y4 = 150;
-        sem_post(&bin_semL6);
+        sem_post(&bin_semL6); // libera o trilho L6
         sleep(velocidade_trem4);
 
         //Sai de L10 vai para L12
         x4 = 420;
         y4 = 200;
-        sem_post(&bin_semL10);
+        sem_post(&bin_semL10); // libera o trilho L10
         sleep(velocidade_trem4);
     }
     pthread_exit(0);

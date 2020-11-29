@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QThread>
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -11,7 +12,7 @@
 #include <string.h>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class sistema4trens; }
+namespace Ui { class sistema4trens;}
 QT_END_NAMESPACE
 
 class sistema4trens : public QMainWindow
@@ -30,20 +31,12 @@ private slots:
 
     void on_actionQuit_triggered();
 
-    void on_verticalSlider_trem1_valueChanged(int value);
-
-    void on_verticalSlider_trem2_valueChanged(int value);
-
-    void on_verticalSlider_trem3_valueChanged(int value);
-
-    void on_verticalSlider_trem4_valueChanged(int value);
-
 private:
     Ui::sistema4trens *ui;
 
     int res;
 
-    pthread_t thread_trem1, thread_trem2, thread_trem3, thread_trem4;
+    pthread_t thread_trem1, thread_trem2, thread_trem3, thread_trem4, thread_interface, thread_painel;
 
     void *thread_result;
 

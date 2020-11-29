@@ -36,7 +36,7 @@
    <widget class="QLabel" name="label_trem1">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>140</x>
       <y>40</y>
       <width>30</width>
       <height>30</height>
@@ -280,7 +280,7 @@
    <widget class="QLabel" name="label_trem2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>250</x>
       <y>40</y>
       <width>30</width>
       <height>30</height>
@@ -296,8 +296,8 @@
    <widget class="QLabel" name="label_trem3">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>260</y>
+      <x>360</x>
+      <y>40</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -312,8 +312,8 @@
    <widget class="QLabel" name="label_trem4">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>40</y>
+      <x>260</x>
+      <y>260</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -468,7 +468,7 @@
      <string>L13</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_L11">
+   <widget class="QLabel" name="label_L12">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -478,10 +478,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>L11</string>
+     <string>L12</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_L12">
+   <widget class="QLabel" name="label_L11">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -491,10 +491,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>L12</string>
+     <string>L11</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -565,6 +565,12 @@
        </item>
        <item>
         <widget class="QSlider" name="verticalSlider_trem2">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>5</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -572,6 +578,12 @@
        </item>
        <item>
         <widget class="QSlider" name="verticalSlider_trem3">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>5</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -579,6 +591,12 @@
        </item>
        <item>
         <widget class="QSlider" name="verticalSlider_trem4">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>5</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>

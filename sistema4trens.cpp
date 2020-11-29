@@ -206,7 +206,7 @@ void* thread_functionPainel(void*)
         velocidade_trem4 = 6 - ui_aux.verticalSlider_trem4->value();
         ui_aux.lcdNumber_trem4->display(ui_aux.verticalSlider_trem4->value());
 
-        usleep(500000);
+        usleep(100000);
 
     }
 }
@@ -220,7 +220,7 @@ void *thread_functionInterface(void *)
         ui_aux.label_trem2->setGeometry(x2,y2,30,30);
         ui_aux.label_trem3->setGeometry(x3,y3,30,30);
         ui_aux.label_trem4->setGeometry(x4,y4,30,30);
-        usleep(500000);
+        usleep(100000);
     }
 }
 
@@ -297,25 +297,25 @@ void *thread_functionTrem3(void *)
         x3 = 370;
         y3 = 40;
         sem_post(&bin_semL5);
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem3);
 
         //Sai de L8 vai para L9
         x3 = 420;
         y3 = 90;
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem3);
 
         //Sai de L9 vai para L10
         sem_wait(&bin_semL10);
         x3 = 360;
         y3 = 150;
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem3);
 
         //Sai de L10 vai para L5
         sem_wait(&bin_semL5);
         x3 = 310;
         y3 = 90;
         sem_post(&bin_semL10);
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem3);
     }
     pthread_exit(0);
 }
@@ -328,38 +328,38 @@ void *thread_functionTrem4(void *)
         // Sai de L12 vai para L13
         x4 = 260;
         y4 = 260;
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem4);
 
         //Sai de L13 vai para L11
         x4 = 90;
         y4 = 200;
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem4);
 
         //Sai de L11 vai para L4
         sem_wait(&bin_semL4);
         x4 = 150;
         y4 = 150;
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem4);
 
         //Sai de L4 vai para L6
         sem_wait(&bin_semL6);
         x4 = 250;
         y4 = 150;
         sem_post(&bin_semL4);
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem4);
 
         //Sai de L6 vai para L10
         sem_wait(&bin_semL10);
         x4 = 360;
         y4 = 150;
         sem_post(&bin_semL6);
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem4);
 
         //Sai de L10 vai para L12
         x4 = 420;
         y4 = 200;
         sem_post(&bin_semL10);
-        sleep(velocidade_trem2);
+        sleep(velocidade_trem4);
     }
     pthread_exit(0);
 }

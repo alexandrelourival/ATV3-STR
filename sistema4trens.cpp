@@ -264,6 +264,7 @@ void *thread_functionTrem2(void *)
         // Sai de L3 vai para L7
         x2 = 250;
         y2 = 40;
+        sem_post(&bin_semL3);
         sleep(velocidade_trem2);
 
         //Sai de L7 vai para L5
@@ -280,6 +281,7 @@ void *thread_functionTrem2(void *)
         sleep(velocidade_trem2);
 
         //Sai de L6 vai para L3
+        sem_wait(&bin_semL3);
         x2 = 200;
         y2 = 90;
         sem_post(&bin_semL6);

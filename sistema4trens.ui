@@ -23,6 +23,9 @@
       <height>10</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
@@ -42,11 +45,26 @@
       <height>30</height>
      </rect>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
     <property name="text">
      <string/>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="indent">
+     <number>0</number>
     </property>
    </widget>
    <widget class="Line" name="line_L1">
@@ -57,6 +75,9 @@
       <width>10</width>
       <height>120</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="lineWidth">
      <number>0</number>
@@ -77,6 +98,9 @@
       <height>10</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
@@ -95,6 +119,9 @@
       <width>10</width>
       <height>120</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="lineWidth">
      <number>0</number>
@@ -115,6 +142,9 @@
       <height>10</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
@@ -133,6 +163,9 @@
       <width>120</width>
       <height>10</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="lineWidth">
      <number>0</number>
@@ -153,6 +186,9 @@
       <height>120</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
@@ -171,6 +207,9 @@
       <width>120</width>
       <height>10</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="lineWidth">
      <number>0</number>
@@ -191,6 +230,9 @@
       <height>10</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
@@ -209,6 +251,9 @@
       <width>10</width>
       <height>120</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="lineWidth">
      <number>0</number>
@@ -229,6 +274,9 @@
       <height>120</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
@@ -247,6 +295,9 @@
       <width>10</width>
       <height>120</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="lineWidth">
      <number>0</number>
@@ -267,6 +318,9 @@
       <height>10</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
@@ -286,11 +340,26 @@
       <height>30</height>
      </rect>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
     <property name="text">
      <string/>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="indent">
+     <number>0</number>
     </property>
    </widget>
    <widget class="QLabel" name="label_trem3">
@@ -302,11 +371,26 @@
       <height>30</height>
      </rect>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
     <property name="text">
      <string/>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="indent">
+     <number>0</number>
     </property>
    </widget>
    <widget class="QLabel" name="label_trem4">
@@ -318,11 +402,26 @@
       <height>30</height>
      </rect>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
     <property name="text">
      <string/>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="indent">
+     <number>0</number>
     </property>
    </widget>
    <widget class="QLabel" name="label_L1">
@@ -333,6 +432,9 @@
       <width>21</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="text">
      <string>L1</string>
@@ -347,6 +449,9 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>L2</string>
     </property>
@@ -359,6 +464,9 @@
       <width>21</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="text">
      <string>L3</string>
@@ -373,6 +481,9 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>L4</string>
     </property>
@@ -385,6 +496,9 @@
       <width>21</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="text">
      <string>L5</string>
@@ -399,6 +513,9 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>L6</string>
     </property>
@@ -411,6 +528,9 @@
       <width>21</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="text">
      <string>L7</string>
@@ -425,6 +545,9 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>L9</string>
     </property>
@@ -437,6 +560,9 @@
       <width>21</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="text">
      <string>L8</string>
@@ -451,6 +577,9 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>L10</string>
     </property>
@@ -463,6 +592,9 @@
       <width>31</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="text">
      <string>L13</string>
@@ -477,6 +609,9 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>L12</string>
     </property>
@@ -490,11 +625,14 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>L11</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>100</x>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.2, 2020-11-26T21:05:07. -->
+<!-- Written by QtCreator 4.13.2, 2020-11-29T16:43:25. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -323,9 +323,8 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ATV3-STR2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/lourival/Área de Trabalho/UFRN/STR/ATV3-STR/ATV3-STR.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/lourival/Área de Trabalho/UFRN/STR/ATV3-STR/ATV3-STR.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/lourival/ATV3-STR/ATV3-STR.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/lourival/ATV3-STR/ATV3-STR.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
@@ -336,7 +335,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/lourival/build-ATV3-STR-Desktop_Qt_5_15_1_GCC_64bit-Debug</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

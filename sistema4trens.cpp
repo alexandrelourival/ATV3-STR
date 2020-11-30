@@ -262,12 +262,10 @@ void *thread_functionTrem1(void *)
     sleep(1);
     while(1)
     {
-        // Sai de L1 vai para L2
-        x1 = 150;
-        y1 = 40;
         sleep(velocidade_trem1);
 
         //Sai de L2 vai para L3
+
         sem_wait(&not_bin_semL3L4L5L6L10); // espera o deadlock dos trilhos L3, L4, L5, L6 e L10 ficar disponível para seguir
         sem_wait(&not_bin_semL3L4L6); // espera o deadlock dos trilhos L3, L4 e L6 ficar disponível para seguir
         sem_wait(&bin_semL3); // espera até o trilho L3 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
@@ -280,15 +278,21 @@ void *thread_functionTrem1(void *)
         x1 = 150;
         y1 = 150;
         sem_post(&bin_semL3); // libera o trilho L3
-        sem_post(&not_bin_semL3L4L6); // libera o deadlock dos trilhos L3, L4 e L6.
-        sem_post(&not_bin_semL3L4L5L6L10); // libera o deadlock dos trilhos L3, L4, L5, L6 e L10.
         sleep(velocidade_trem1);
 
         //Sai de L4 vai para L1
         x1 = 90;
         y1 = 90;
+        sem_post(&not_bin_semL3L4L5L6L10); // libera o deadlock dos trilhos L3, L4, L5, L6 e L10.
+        sem_post(&not_bin_semL3L4L6); // libera o deadlock dos trilhos L3, L4 e L6.
         sem_post(&bin_semL4); // libera o trilho L4
         sleep(velocidade_trem1);
+
+        // Sai de L1 vai para L2
+        x1 = 150;
+        y1 = 40;
+
+
     }
     pthread_exit(0);
 }
@@ -298,10 +302,6 @@ void *thread_functionTrem2(void *)
     sleep(1);
     while(1)
     {
-        // Sai de L3 vai para L7
-        x2 = 250;
-        y2 = 40;
-        sem_post(&bin_semL3); // libera o trilho L3
         sleep(velocidade_trem2);
 
         //Sai de L7 vai para L5
@@ -318,17 +318,23 @@ void *thread_functionTrem2(void *)
         x2 = 250;
         y2 = 150;
         sem_post(&bin_semL5); // libera o trilho L5
-        sem_post(&not_bin_semL5L6L10); // libera o deadlock dos trilhos L5, L6 e L10
         sleep(velocidade_trem2);
 
         //Sai de L6 vai para L3
         sem_wait(&bin_semL3); // espera até o trilho L3 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x2 = 200;
         y2 = 90;
+        sem_post(&not_bin_semL5L6L10); // libera o deadlock dos trilhos L5, L6 e L10
         sem_post(&bin_semL6); // libera o trilho L6
-        sem_post(&not_bin_semL3L4L6); // libera o deadlock dos trilhos L3, L4 e L6
-        sem_post(&not_bin_semL3L4L5L6L10); // libera o deadlock dos trilhos L3, L4, L5, L6 e L10
         sleep(velocidade_trem2);
+
+        // Sai de L3 vai para L7
+        x2 = 250;
+        y2 = 40;
+        sem_post(&not_bin_semL3L4L5L6L10); // libera o deadlock dos trilhos L3, L4, L5, L6 e L10
+        sem_post(&not_bin_semL3L4L6); // libera o deadlock dos trilhos L3, L4 e L6
+        sem_post(&bin_semL3); // libera o trilho L3
+
     }
     pthread_exit(0);
 }
@@ -338,10 +344,6 @@ void *thread_functionTrem3(void *)
     sleep(1);
     while(1)
     {
-        // Sai de L5 vai para L8
-        x3 = 370;
-        y3 = 40;
-        sem_post(&bin_semL5); // libera o trilho L5
         sleep(velocidade_trem3);
 
         //Sai de L8 vai para L9
@@ -362,9 +364,15 @@ void *thread_functionTrem3(void *)
         x3 = 310;
         y3 = 90;
         sem_post(&bin_semL10); // libera o trilho L10
-        sem_post(&not_bin_semL5L6L10); // libera o deadlock dos trilhos L5, L6 e L10.
-        sem_post(&not_bin_semL3L4L5L6L10); // libera o deadlock dos trilhos L3, L4, L5, L6 e L10
         sleep(velocidade_trem3);
+
+        // Sai de L5 vai para L8
+        x3 = 370;
+        y3 = 40;
+        sem_post(&not_bin_semL3L4L5L6L10); // libera o deadlock dos trilhos L3, L4, L5, L6 e L10
+        sem_post(&not_bin_semL5L6L10); // libera o deadlock dos trilhos L5, L6 e L10.
+        sem_post(&bin_semL5); // libera o trilho L5
+
     }
     pthread_exit(0);
 }
@@ -374,9 +382,6 @@ void *thread_functionTrem4(void *)
     sleep(1);
     while(1)
     {
-        // Sai de L12 vai para L13
-        x4 = 260;
-        y4 = 260;
         sleep(velocidade_trem4);
 
         //Sai de L13 vai para L11
@@ -398,23 +403,27 @@ void *thread_functionTrem4(void *)
         x4 = 250;
         y4 = 150;
         sem_post(&bin_semL4); // libera o trilho L4
-        sem_post(&not_bin_semL3L4L6); // libera o deadlock dos trilhos L3, L4 e L6.
         sleep(velocidade_trem4);
 
         //Sai de L6 vai para L10
         sem_wait(&bin_semL10); // espera até o trilho L10 ficar disponível e quando tiver ele entra no trilho e fecha o semaforo
         x4 = 360;
         y4 = 150;
+        sem_post(&not_bin_semL3L4L6); // libera o deadlock dos trilhos L3, L4 e L6.
         sem_post(&bin_semL6); // libera o trilho L6
-        sem_post(&not_bin_semL5L6L10); // libera o deadlock dos trilhos L5, L6 e L10.
-        sem_post(&not_bin_semL3L4L5L6L10); // libera o deadlock dos trilhos L3, L4, L5, L6 e L10
         sleep(velocidade_trem4);
 
         //Sai de L10 vai para L12
         x4 = 420;
         y4 = 200;
+        sem_post(&not_bin_semL3L4L5L6L10); // libera o deadlock dos trilhos L3, L4, L5, L6 e L10
+        sem_post(&not_bin_semL5L6L10); // libera o deadlock dos trilhos L5, L6 e L10.
         sem_post(&bin_semL10); // libera o trilho L10
         sleep(velocidade_trem4);
+
+        // Sai de L12 vai para L13
+        x4 = 260;
+        y4 = 260;
     }
     pthread_exit(0);
 }

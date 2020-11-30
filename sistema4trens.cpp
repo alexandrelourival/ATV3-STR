@@ -30,7 +30,7 @@ sistema4trens::sistema4trens(QWidget *parent)
     velocidade_trem4 = 6 - ui->verticalSlider_trem4->value();
 
     ui->label_trem1->setVisible(false);
-    ui->label_trem1->setGeometry(150,40,30,30);
+    ui->label_trem1->setGeometry(150,40,25,25);
     ui->label_trem1->setPixmap(QPixmap("/home/lourival/ATV3-STR/azul.png"));
 
     ui->label_trem2->setVisible(false);
@@ -44,20 +44,6 @@ sistema4trens::sistema4trens(QWidget *parent)
     ui->label_trem4->setVisible(false);
     ui->label_trem4->setGeometry(260,260,30,30);
     ui->label_trem4->setPixmap(QPixmap("/home/lourival/ATV3-STR/amarelo.png"));
-
-    /*ui->label_L1->setVisible(false); ajeitando visibilidade
-    ui->label_L2->setVisible(false);
-    ui->label_L3->setVisible(false);
-    ui->label_L4->setVisible(false);
-    ui->label_L5->setVisible(false);
-    ui->label_L6->setVisible(false);
-    ui->label_L7->setVisible(false);
-    ui->label_L8->setVisible(false);
-    ui->label_L9->setVisible(false);
-    ui->label_L10->setVisible(false);
-    ui->label_L11->setVisible(false);
-    ui->label_L12->setVisible(false);
-    ui->label_L13->setVisible(false);*/
 
     x1 = ui->label_trem1->x();
     y1 = ui->label_trem1->y();
@@ -249,7 +235,7 @@ void *thread_functionInterface(void *)
 {
     while(1)
     {
-        ui_aux.label_trem1->setGeometry(x1,y1,30,30); // atualiza a posição do trem 1
+        ui_aux.label_trem1->setGeometry(x1,y1,25,25); // atualiza a posição do trem 1
         ui_aux.label_trem2->setGeometry(x2,y2,30,30); // atualiza a posição do trem 2
         ui_aux.label_trem3->setGeometry(x3,y3,30,30); // atualiza a posição do trem 3
         ui_aux.label_trem4->setGeometry(x4,y4,30,30); // atualiza a posição do trem 4

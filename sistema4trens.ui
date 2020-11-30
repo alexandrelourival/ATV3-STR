@@ -26,45 +26,17 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_trem1">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>40</y>
-      <width>30</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="indent">
-     <number>0</number>
     </property>
    </widget>
    <widget class="Line" name="line_L1">
@@ -79,11 +51,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
@@ -101,11 +76,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -123,11 +101,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
@@ -145,11 +126,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -167,11 +151,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -189,11 +176,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
@@ -211,11 +201,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -233,11 +226,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -255,11 +251,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
@@ -277,11 +276,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
@@ -299,11 +301,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
@@ -321,11 +326,14 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>20</number>
     </property>
     <property name="midLineWidth">
-     <number>20</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -803,6 +811,37 @@
       </layout>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label_trem1">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>40</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="indent">
+     <number>0</number>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

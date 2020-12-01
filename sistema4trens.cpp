@@ -30,7 +30,7 @@ sistema4trens::sistema4trens(QWidget *parent)
     velocidade_trem4 = 6 - ui->verticalSlider_trem4->value();
 
     ui->label_trem1->setVisible(false);
-    ui->label_trem1->setGeometry(150,40,25,25);
+    ui->label_trem1->setGeometry(150,40,30,30);
     ui->label_trem1->setPixmap(QPixmap("/home/lourival/ATV3-STR/azul.png"));
 
     ui->label_trem2->setVisible(false);
@@ -154,7 +154,7 @@ void sistema4trens::on_actionStart_triggered()
     }
 }
 
-void sistema4trens::on_actionStop_triggered()
+void sistema4trens::on_actionQuit_triggered()
 {
     res = pthread_join(thread_trem1, &thread_result);
     if (res != 0) {
@@ -199,14 +199,8 @@ void sistema4trens::on_actionStop_triggered()
     sem_destroy(&bin_semL4);  // destruição do semaforo L4
     sem_destroy(&bin_semL5);  // destruição do semaforo L5
     sem_destroy(&bin_semL6);  // destruição do semaforo L6
-    sem_destroy(&bin_semL10);  // destruição do semaforo L10*/
+    sem_destroy(&bin_semL10);  // destruição do semaforo L10
 
-
-}
-
-void sistema4trens::on_actionQuit_triggered()
-{
-    on_actionStop_triggered();
     QApplication::quit();
 }
 
@@ -235,7 +229,7 @@ void *thread_functionInterface(void *)
 {
     while(1)
     {
-        ui_aux.label_trem1->setGeometry(x1,y1,25,25); // atualiza a posição do trem 1
+        ui_aux.label_trem1->setGeometry(x1,y1,30,30); // atualiza a posição do trem 1
         ui_aux.label_trem2->setGeometry(x2,y2,30,30); // atualiza a posição do trem 2
         ui_aux.label_trem3->setGeometry(x3,y3,30,30); // atualiza a posição do trem 3
         ui_aux.label_trem4->setGeometry(x4,y4,30,30); // atualiza a posição do trem 4

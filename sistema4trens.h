@@ -27,8 +27,6 @@ private slots:
 
     void on_actionStart_triggered();
 
-    void on_actionStop_triggered();
-
     void on_actionQuit_triggered();
 
 private:
